@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Schoolmanagement system loginpage</title>
+    <style>
+        *{
+    font-family: sans-serif;
+
+}
+body {
+    background-color: #D9D9D9;
+    overflow: hidden;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.box {
+    height: 400px;
+    width: 500px;
+
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.page {
+    text-align: center;
+}
+
+.page input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    margin-bottom: 40px;
+    width: 300px;
+}
+
+.page input:focus{
+    outline: none;
+}
+.page h1{
+    font-weight: lighter;
+}
+
+#myinput::placeholder {
+    text-indent: 10px;
+    font-size: 15px;
+}
+input[type="text"], input[type="password"] {
+    text-indent: 10px;
+}
+
+.loginbutton a {
+    text-decoration: none;
+    background-color: #BD3738;
+    color: #fff;
+    border: none;
+    padding: 10px 130px;
+    border-radius: 50px;
+}
+.loginbutton a:hover {
+    background-color: #a16666;
+    border: none;
+    transition: 1s ease;
+}
+.signupbutton {
+    margin-top: 25px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+
+
+            <div class="login">
+                <div class="page">
+                    <h1>Welcome</h1>
+<!--                    <label>-->
+<!--                        <input type="text"  placeholder="Username">-->
+<!--                    </label><br>-->
+<!--                    <label>-->
+<!--                        <input type="password"  placeholder="Password">-->
+<!--                    </label><br>-->
+<!--                    <div class="loginbutton"><a href="{% url 'school:dashboard'%}">Log in</a></div>-->
+                        <form method="POST">
+                            {% csrf_token%}
+                            <input type="text" placeholder="Username" name="user_name">
+                            <input type="password" class="txt-pass" placeholder="Password">
+                            <input type="submit" class="login-btn" value="Login">
+                        </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

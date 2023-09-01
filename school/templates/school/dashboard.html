@@ -1,0 +1,78 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>dashboard</title>
+    <style>
+        * {
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: #D9D9D9;
+    width: 100vw;
+    height: 15vh;
+}
+.mainbar {
+    display: flex;
+    justify-content: space-between;
+    height: 100;
+    align-items: center;
+}
+.bar a {
+    margin-right: 40px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    border-bottom: 1px solid black;
+    padding: 5px 15px;
+}
+.bar a:hover {
+    border-bottom: none;
+    transition: 0.9s ease;
+}
+
+.logo {
+    margin-left: 50px;
+}
+.mainbody {
+    height: 70vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(body.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.footer {
+    height: 15vh;
+    background-color: #D9D9D9;
+}
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="mainbar">
+            <div class="logo"><h1>LOGO</h1></div>
+            <div class="bar">
+                <a href="">Home</a>
+                <a href="">Grades</a>
+                <a href="">Attendance</a>
+                <a href="">Conduct</a>
+                <a href="">More</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="mainbody"></div>
+
+    <div class="footer"></div>
+
+</body>
+</html>
