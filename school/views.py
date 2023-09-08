@@ -31,3 +31,8 @@ def log(request):
             return render(request, 'school/dashboard.html', {'error': 'Invalid credentials'})
     return render(request, 'scho'
                            'ol/login.html')
+def grades(request):
+    subject = models.Subject.objects.all()
+    context = {'subjects': subject}
+    
+    return render(request,'subject_grade/grade.html',context=context)
