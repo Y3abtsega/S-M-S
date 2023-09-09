@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Chat.css' %}">
+    <script src="https://use.fontawesome.com/b6cb9759e8.js"></script>
+
+    <title>Chat</title>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="mainbar">
+            <div class="logo"><h1>Chat</h1></div>
+            <div class="bar">
+                <li><a href="{% url 'dashboard' %}">Home</a></li>
+                <li><a href="{% url 'Grades' %}" >Grades</a></li>
+                <li><a href="{% url 'Calender' %}">Calender</a></li>
+                <li><a href="{% url 'Chat' %}" class="bold">Chat</a></li>
+                <li class="dropdown"><a href="">More</a>
+                    <div class="dropdownmenu">
+                        <a href="">Attendance</a>
+                        <a href="">Notification</a>
+                        <a href="">COnduct</a>
+                        <a href="">Setting</a>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="mainbody">
+        
+        <div class="chatbox">
+            <div class="chatlist">
+
+                <div class="chatusername">
+                    <div class="ppandname">
+                        <button>
+                            <img src="{% static 'img/pp.jpg' %}" alt="">
+                            <p style="font-size: 17px; margin-left: -20px; margin-top: 20px; color: white;">English teacher</p>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chatusername">
+                    <div class="ppandname">
+                        <button style="background-color: #985858;">
+                            <img src="{% static 'img/pp.jpg' %}" alt="">
+                            <p style="font-size: 17px; margin-left: -20px; margin-top: 20px; color: white;">Math teacher</p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="chatusername">
+                    <div class="ppandname">
+                        <button>
+                            <img src="{% static 'img/pp.jpg' %}" alt="">
+                            <p style="font-size: 17px; margin-left: -20px; margin-top: 20px; color: white;">Physics teacher</p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="chatusername">
+                    <div class="ppandname">
+                        <button>
+                            <img src="{% static 'img/pp.jpg' %}" alt="">
+                            <p style="font-size: 17px; margin-left: -20px; margin-top: 20px; color: white;">Biology teacher</p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="chatusername">
+                    <div class="ppandname">
+                        <button>
+                            <img src="{% static 'img/pp.jpg' %}" alt="">
+                            <p style="font-size: 17px; margin-left: -20px; margin-top: 20px; color: white;">Civics teacher</p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="chatusername">
+                    <div class="ppandname">
+                        <button>
+                            <img src="{% static 'img/pp.jpg' %}" alt="">
+                            <p style="font-size: 17px; margin-left: -20px; margin-top: 20px; color: white;">HPE teacher</p>
+                        </button>
+                    </div>
+                </div>
+
+
+                
+                
+                
+            </div>
+            
+            <div class="message">
+                <div class="messagebox">
+                    <input type="text" name="search"  placeholder="Enter a Message ...">
+                    <div class="sendarrow">
+                        <button><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+            
+        </div>
+        
+    </div>
+
+  
+
+</body>
+</html>

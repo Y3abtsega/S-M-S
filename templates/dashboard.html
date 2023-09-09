@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <script src="https://use.fontawesome.com/b6cb9759e8.js"></script>
+    <title>dashboard</title>
+
+</head>
+<body>
+    
+    <div class="header">
+        <div class="mainbar">
+            <div class="logo"><h1>LOGO</h1></div>
+            <div class="bar">
+                <li><a href="" class="bold">Home</a></li>
+                <li><a href="{% url 'Grades' %}">Grades</a></li>
+                <li><a href="{% url 'Calender' %}">Calender</a></li>
+                <li><a href="{% url 'Chat' %}">Chat</a></li>
+                <li class="dropdown"><a href="">More</a>
+                    <div class="dropdownmenu">
+                        <a href="">Attendance</a>
+                        <a href="">Notification</a>
+                        <a href="">Conduct</a>
+                        <a href="">Setting</a>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="mainbody" style="background-image: url({% static '' %});">
+        <div class="maintext">
+            <div class="text">
+                <h1> <small  style="color: #BD3738; font-size: 50px;"> Welcome on our site</small> <br>  Primary School <br>
+                     <small style="font-size: 17px;">
+                    Welcome to our school We are delighted to have you
+                join our <br>educational community. Where learning, growth
+            and friendship await<br> you. 
+                </small>
+            </h1>
+                
+            </div>
+        </div>
+    </div>
+
+  
+
+</body>
+</html>
