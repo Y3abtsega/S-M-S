@@ -48,3 +48,9 @@ def Calender(request) :
 
 def Chat(request) :
     return render(request, 'Chat.html')
+
+# teacher's grade table code goes here ...
+
+def tgrade(request) :
+
+    return render(request, 'teacher grade table.html')
