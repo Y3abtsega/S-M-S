@@ -39,8 +39,7 @@ def dashboard(request) :
     return render(request, 'dashboard.html')
 
 def Grades(request) :
-    name = Name.objects.first()
-    return render(request, 'Grades.html', {'name': name})
+    return render(request, 'Grades.html')
 
 
 def Calender(request) :
