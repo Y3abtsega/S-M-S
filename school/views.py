@@ -34,5 +34,6 @@ def log(request):
 def grades(request):
     subject = models.Subject.objects.all()
     context = {'subjects': subject}
-    
-    return render(request,'subject_grade/grade.html',context=context)
+
+    name = 'aaaa'
+    return render(request,'subject_grade/grade.html',context=context, name = name)
