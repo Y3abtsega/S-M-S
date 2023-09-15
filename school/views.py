@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.urls import reverse
 from . import models
 from django.contrib.auth import authenticate,login
 from .models import Parents
@@ -18,16 +19,20 @@ def log(request):
 
         user_name = request.POST.get('user_name', '')
         password = request.POST.get('password', '')
-        user = authenticate(request, user_name=user_name, password=password)
-        # if user is not None:
-        #     login(request, user)
-        #     return redirect(reverse('school:dashboard'))
-        # else:
-        #     return render(request, 'school/login.html', {'error': 'Invalid credentials'})
-        user1 = Parents.objects.get(user_name=user_name)
-        if user1.password  ==password:
-            return redirect(request, 'school/dashboard.html')
+        user = Parents.objects.get(user_name=user_name)
+        if user.password==password:
+            return redirect(reverse('school:dashboard'))
         else:
-            return render(request, 'school/dashboard.html', {'error': 'Invalid credentials'})
-    return render(request, 'scho'
-                           'ol/login.html')
+            return render(request, 'school/login.html', {'error': 'Invalid credentials'})
+    return render(request, 'school/login.html')
+
+
+def grades(request):
+    return render(request, 'school/grades.html')
+
+
+def chat(request):
+    return render(request, 'school/chat.html')
+
+def calender(request):
+    return render(request, 'school/calender.html')

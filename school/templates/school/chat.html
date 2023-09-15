@@ -1,0 +1,287 @@
+<html lang="en">
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'school/chat.css'}">
+    <script src="https://use.fontawesome.com/b6cb9759e8.js"></script>
+    <style>
+        * {
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #D9D9D9;
+}
+.header {
+    width: 100vw;
+    height: 15vh;
+}
+.mainbar {
+    display: flex;
+    justify-content: space-between;
+    height: 100;
+    align-items: center;
+}
+.bar li {
+    list-style-type: none;
+    display: inline-block;
+}
+.bar .bold {
+    color: #BD3738;
+}
+.bar a {
+    margin-right: 40px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 5px 15px;
+}
+.bar a:hover {
+    color: #BD3738;
+    transition: 0.5s ease;
+}
+.dropdownmenu {
+    display: none;
+    position: absolute;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1));
+    width: 185px;
+    height: 160px;
+    padding: 10px;
+    right: 1.5%;
+    top: 9.5%;
+    border-radius: 15px;
+}
+
+.dropdownmenu a{
+    font-size: 17px;
+    border-bottom: none;
+    padding: 10px;
+    display: flex;
+    width: 165px;
+    justify-content: center;
+}
+.dropdownmenu a:hover {
+    background-color: #D9D9D9;
+    transition: 0.5s ease;
+}
+
+.dropdown:hover .dropdownmenu {
+    display: block;
+}
+
+.logo {
+    margin-left: 50px;
+}
+.mainbody {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.chatbox {
+    height: 500px;
+    width: 750px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+    display: flex;
+}
+.chatbox .chatlist {
+    height: 500px;
+    width: 250px;
+
+    background-color: #BD3738;
+}
+.chatbox .chatlist .chatusername {
+    width: 250px;
+    height: 70px;
+
+}
+.chatusername .ppandname {
+    display: flex;
+    justify-content: space-around;
+}
+.chatusername img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+.chatusernmae .ppandname button p {
+    font-size: 430px;
+}
+.ppandname button {
+    width: 250px;
+    height: 70px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+.ppandname button:hover {
+    background-color: #985858;
+    transition: 0.5s ease;
+}
+.message {
+    display: flex;
+    height: 500px;
+    align-items: flex-end;
+    margin-top: -20px;
+}
+.chatbox .messagebox {
+    width: 450px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 50px;
+}
+.chatbox .messagebox input {
+    width: 450px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #D9D9D9;
+    border: none;
+}
+.chatbox .messagebox input::placeholder {
+    text-indent: 30px;
+}
+.chatbox .messagebox input:focus {
+    outline: none;
+}
+.chatbox .messagebox input[type = "text"] {
+    text-indent: 30px;
+}
+.messagebox .sendarrow {
+    display: flex;
+    justify-content: flex-end;
+}
+.messagebox .sendarrow button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: -50px;
+    margin-right: 10px;
+}
+.messagebox .sendarrow button i {
+    font-size: 20px;
+    color: #605656;
+}
+
+    </style>
+    <title>Chat</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="mainbar">
+            <div class="logo"><h1>Chat</h1></div>
+            <div class="bar">
+                <li><a href="{% url 'school:dashboard'%}">Home</a></li>
+                <li><a href="{% url 'school:grades'%}" class="bold">Grades</a></li>
+                <li><a href="{% url 'school:calender'%}">Calender</a></li>
+                <li><a href="{% url 'school:chat'%}">Chat</a></li>
+                <li class="dropdown"><a href="">More</a>
+                    <div class="dropdownmenu">
+                        <a href="">Attendance</a>
+                        <a href="">Notification</a>
+                        <a href="">COnduct</a>
+                        <a href="">Setting</a>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="mainbody">
+
+        <div class="chatbox">
+            <div class="chatlist">
+
+                <div class="chatusername">
+                    <div class="ppandname">
+                        <button>
+                            <img src="pp.jpg" alt="">
+                            <p style="font-size: 17px; margin-left: -20px; margin-top: 20px; color: white;">English teacher</p>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chatusername">
+                    <div class="ppandname">
+                        <button style="background-color: #985858;">
+                            <img src="pp.jpg" alt="">
+                            <p style="font-size: 17px; margin-left: -20px; margin-top: 20px; color: white;">Math teacher</p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="chatusername">
+                    <div class="ppandname">
+                        <button>
+                            <img src="pp.jpg" alt="">
+                            <p style="font-size: 17px; margin-left: -20px; margin-top: 20px; color: white;">Physics teacher</p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="chatusername">
+                    <div class="ppandname">
+                        <button>
+                            <img src="pp.jpg" alt="">
+                            <p style="font-size: 17px; margin-left: -20px; margin-top: 20px; color: white;">Biology teacher</p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="chatusername">
+                    <div class="ppandname">
+                        <button>
+                            <img src="pp.jpg" alt="">
+                            <p style="font-size: 17px; margin-left: -20px; margin-top: 20px; color: white;">Civics teacher</p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="chatusername">
+                    <div class="ppandname">
+                        <button>
+                            <img src="pp.jpg" alt="">
+                            <p style="font-size: 17px; margin-left: -20px; margin-top: 20px; color: white;">HPE teacher</p>
+                        </button>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+            <div class="message">
+                <div class="messagebox">
+                    <input type="text" name="search"  placeholder="Enter a Message ...">
+                    <div class="sendarrow">
+                        <button><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

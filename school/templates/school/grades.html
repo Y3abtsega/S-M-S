@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'school/Grades.css'%}">
+    <title>Grades</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="mainbar">
+            <div class="logo"><h1>Student Grade Table</h1></div>
+            <div class="bar">
+                <li><a href="{% url 'school:dashboard'%}">Home</a></li>
+                <li><a href="{% url 'school:grades'%}" class="bold">Grades</a></li>
+                <li><a href="{% url 'school:calender'%}">Calender</a></li>
+                <li><a href="{% url 'school:chat'%}">Chat</a></li>
+                <li class="dropdown"><a href="">More</a>
+                <li class="dropdown"><a href="">More</a>
+                    <div class="dropdownmenu">
+                        <a href="">Attendance</a>
+                        <a href="">Notification</a>
+                        <a href="">COnduct</a>
+                        <a href="">Setting</a>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="mainbody">
+        <div class="studentname">
+            <h3>Student Name : <small>Abebe Kebede Chala</small></h3>
+
+        </div>
+        <div class="bodyy">
+            <div class="table">
+                <div class="tableheader">
+                    <div class="tableheadercontent">
+                        <p>Course Name</p>
+                        <p>Test 1</p>
+                        <p>Test 2</p>
+                        <p>Mid Exam</p>
+                        <p>Assignment</p>
+                        <p>Final Exam</p>
+                        <p>FInal Grade</p>
+                    </div>
+                </div>
+
+                <div class="tablerow">
+                        <p>Eng</p>
+                        <p>10</p>
+                        <p>10</p>
+                        <p>20</p>
+                        <p>20</p>
+                        <p>40</p>
+                        <p>100</p>
+                </div>
+                <div class="tablerow">
+                    <p>Math</p>
+                    <p>10</p>
+                    <p>10</p>
+                    <p>20</p>
+                    <p>20</p>
+                    <p>40</p>
+                    <p>100</p>
+                </div>
+                <div class="tablerow">
+                    <p>HPE</p>
+                    <p>10</p>
+                    <p>10</p>
+                    <p>20</p>
+                    <p>20</p>
+                    <p>40</p>
+                    <p>100</p>
+                </div>
+                <div class="tablerow">
+                    <p>Bio</p>
+                    <p>10</p>
+                    <p>10</p>
+                    <p>20</p>
+                    <p>20</p>
+                    <p>40</p>
+                    <p>100</p>
+                </div>
+                <div class="tablerow">
+                    <p>Cvc</p>
+                    <p>10</p>
+                    <p>10</p>
+                    <p>20</p>
+                    <p>20</p>
+                    <p>40</p>
+                    <p>100</p>
+                 </div>
+                 <div class="tablerow">
+                    <p>Phy</p>
+                    <p>10</p>
+                    <p>10</p>
+                    <p>20</p>
+                    <p>20</p>
+                    <p>40</p>
+                    <p>100</p>
+                 </div>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
