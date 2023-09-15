@@ -117,7 +117,23 @@ body {
     justify-content: space-around;
 }
 .tablerow p input {
+    margin-left: -50px;
+    margin-top: -10px;
     width: 30px;
+    height: 24px;
+    border: none;
+    border: 1px solid;
+    border-color: #BD3738;
+    background-color: #D9D9D9;
+    outline: none;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,1);
+}
+.tablerow p input[type="text"] {
+    text-indent: 5px;
+}
+
+.tablerow p input::placeholder {
+    text-indent: 5px;
 }
 
 .savebutton {
