@@ -8,4 +8,5 @@ urlpatterns = [
     path('Grades/', views.Grades, name='Grades'),
     path('Calender/', views.Calender, name='Calender'),
     path('Chat/', views.Chat, name='Chat'),
+    path('tgrade/', views.tgrade, name='tgrade'),
 ]

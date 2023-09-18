@@ -39,8 +39,7 @@ def dashboard(request) :
     return render(request, 'dashboard.html')
 
 def Grades(request) :
-    name = Name.objects.first()
-    return render(request, 'Grades.html', {'name': name})
+    return render(request, 'Grades.html')
 
 
 def Calender(request) :
@@ -48,3 +47,9 @@ def Calender(request) :
 
 def Chat(request) :
     return render(request, 'Chat.html')
+
+# teacher's grade table code goes here ...
+
+def tgrade(request) :
+
+    return render(request, 'teacher grade table.html')

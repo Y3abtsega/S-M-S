@@ -17,6 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+<<<<<<< HEAD
     path('admin/', admin.site.urls),
     path('', include('schoolapp.urls')),
+=======
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('login/', views.log, name='login'),
+    # Add other URLs as needed
+>>>>>>> parent of db1b9a4 (added url)
 ]
