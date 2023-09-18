@@ -70,7 +70,11 @@ body {
 
 .mainbody {
     height: 85vh;
+<<<<<<< HEAD
     background-image: url("../../static/image/back.jpg");
+=======
+    background-image: url("{% static 'img/back.jpg' %}");
+>>>>>>> c40d881 (second iteration)
     background-position: center;
 }
 .mainbody .maintext {

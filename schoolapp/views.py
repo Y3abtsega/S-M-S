@@ -1,7 +1,11 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
+<<<<<<< HEAD
 from .models import Name
+=======
+from .models import Subjects
+>>>>>>> c40d881 (second iteration)
 from django.contrib import messages
 
 
@@ -39,9 +43,18 @@ def dashboard(request) :
     return render(request, 'dashboard.html')
 
 def Grades(request) :
+<<<<<<< HEAD
     name = Name.objects.first()
     return render(request, 'Grades.html', {'name': name})
 
+=======
+    return render(request, 'Grades.html')
+
+def Grades(request):
+    subject = Subjects.objects.all()
+    context = {'subjects': subject}
+    return render(request,'Grades.html',context=context)
+>>>>>>> c40d881 (second iteration)
 
 def Calender(request) :
     return render(request, 'Calender.html')

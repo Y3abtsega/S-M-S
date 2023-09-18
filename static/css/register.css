@@ -39,7 +39,10 @@ body {
 
 .page input:focus{
     outline: none;
+<<<<<<< HEAD
     
+=======
+>>>>>>> c40d881 (second iteration)
 }
 .page h1{
     font-weight: lighter;
