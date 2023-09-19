@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
-from .models import Name
 from django.contrib import messages
 
 
@@ -25,6 +24,7 @@ def login_page(request) :
         username = request.POST.get('username')
         password = request.POST.get('password')
         
+
         user = authenticate(request, username = username, password = password)
         if user is not None:
             login(request, user)
