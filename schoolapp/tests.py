@@ -5,7 +5,7 @@ from django.core.exceptions import ValidationError
 # Create your tests here.
 class Test_for_User(TestCase):
     def testfunction(self):
-        name = "a" * 1000
+        name = "a" * 100
         test = Users(
             fullname = name,
             username = "name",
