@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
-from django.contrib import messages
-from .models import Student
+
 
 # Create your views here.
 def register(request):
@@ -10,13 +9,10 @@ def register(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         fullname = request.POST.get('fullname')
-        classs = request.POST.get('class')  # Retrieve the class value
         if username == '' or password == '' or fullname == '':
             return redirect('register')
         user = User.objects.create_user(username=username, password=password)
-        student = Student(student=user, cl=classs)  # Pass the class value to the Student model
         user.save()
-        student.save()
         return HttpResponse("Successfully registered")
     return render(request, 'register.html')
 

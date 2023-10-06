@@ -1,4 +1,4 @@
 # from django.contrib import admin
-# from schoolapp.models import StudentName
+# from schoolapp.models import Student
 
-# admin.site.register(StudentName)
+# admin.site.register(Student)    

@@ -86,27 +86,6 @@ class TakenCourse(models.Model):
     class Meta:
         unique_together = ('student', 'subject')
 
-# from django.db import models
-
-# class StudentName(models.Model):
-#     studentname = models.CharField(max_length=100, null=False)
-
-# class Subjects(models.Model):
-#     studentname = models.ForeignKey(StudentName, on_delete=models.CASCADE)
-#     bio = models.IntegerField(null=True)
-#     phy = models.IntegerField(null=True)
-#     english = models.IntegerField(null=True)
-#     cvc = models.IntegerField(null=True)
-#     hpe = models.IntegerField(null=True)
-#     bio = models.IntegerField(null=True)
-# class Grades(models.Model):
-#     subjects = models.ForeignKey(Subjects, on_delete=models.CASCADE)
-#     Test1 = models.IntegerField(null=True)
-#     Test2 = models.IntegerField(null=True)
-#     MidExam = models.IntegerField(null=True)
-#     Assignment = models.IntegerField(null=True)
-#     FinalExam = models.IntegerField(null=True)
-#     Total = models.IntegerField(null=True)
 
 
     
