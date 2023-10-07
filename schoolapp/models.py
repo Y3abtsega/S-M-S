@@ -10,4 +10,14 @@ class Parents(models.Model):
         return self.user_name
     
     objects = models.Manager()
-    
+
+class Teacher(models.Model):
+    # user = models.OneToOneField(User, on_delete=models.CASCADE, default=None)
+    user_name = models.CharField(max_length=100)
+    password = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.user_name
+
+    objects = models.Manager()
+
