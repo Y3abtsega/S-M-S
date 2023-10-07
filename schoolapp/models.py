@@ -21,3 +21,15 @@ class Teacher(models.Model):
 
     objects = models.Manager()
 
+class AddGrade(models.Model):
+    
+
+    subject = models.CharField(max_length=100)
+    student_name = models.CharField(max_length=100)
+    file = models.FileField(upload_to='uploads/')
+
+    objects = models.Manager()
+    def __str__(self):
+        return f"Grade for {self.student_name} in {self.subject}"
+    
+
