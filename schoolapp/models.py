@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from django import forms
 
 
 classes = [
@@ -33,6 +34,7 @@ course_mapping = {
     'twelve': ['English', 'Amharic', 'Science', 'Health Education', 'Civics and Social', 'Physics', 'Biology', 'Chemistry', 'Technical Drawing', 'ICT']
 }
 
+
 class Subject(models.Model):
     name = models.CharField(max_length=100)
 
@@ -41,9 +43,14 @@ class Subject(models.Model):
 
 class Student(models.Model):
     student = models.ForeignKey(User, on_delete=models.DO_NOTHING)
-    id_number = models.CharField(max_length=2000, unique=True, blank=True)
+    id = models.AutoField(primary_key=True)
+    first_name = models.CharField(max_length=120)
+    last_name = models.CharField(max_length=120)
+    phone = models.CharField(max_length=60, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
     cl = models.CharField(max_length=10, choices=classes, default='one')
     subjects = models.ManyToManyField(Subject)
+
 
     def str(self):
         return self.student.get_full_name()
@@ -79,14 +86,3 @@ class TakenCourse(models.Model):
     final_exam = models.DecimalField(max_digits=5, decimal_places=2, default=0.0)
     total = models.DecimalField(max_digits=5, decimal_places=2, default=0.0)
     grade = models.CharField(choices=GRADE, max_length=1, default='F')
-
-    def str(self):
-        return f"{self.subject.name} - {self.student}"
-
-    class Meta:
-        unique_together = ('student', 'subject')
-
-
-
-    
-
